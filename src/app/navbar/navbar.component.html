@@ -1,10 +1,21 @@
 <mat-toolbar color="primary">
-        <button mat-icon-button>
-            <mat-icon>home</mat-icon>
-            <span class="link">Temperature Log</span>
-        </button>
-        <div class="fill"></div>
-        <button mat-icon-button>
-            <mat-icon>more_vert</mat-icon>
-        </button>
+    <button [routerLink]="['/']" mat-icon-button>
+        <mat-icon>home</mat-icon>
+        <span class="button-text">Tempetaure Log</span>
+    </button>
+    <div class="fill"></div>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
 </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button [routerLink]="['/stations']" mat-menu-item>
+        <mat-icon>router</mat-icon>
+        <span class="button-text">Stations</span>
+    </button>
+    <a href="https://github.com/bartek-krk" mat-menu-item>
+        <mat-icon>info</mat-icon>
+        <span class="button-text">About me</span>
+    </a>
+</mat-menu>

@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MeasurementPlotComponent } from './measurement-plot/measurement-plot.component';
 import { MeasurementTableComponent } from './measurement-table/measurement-table.component';
 import { TlMaterialModule } from './tl-material/tl-material.module';
+import { StationsComponent } from './stations/stations.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TlMaterialModule } from './tl-material/tl-material.module';
     NavbarComponent,
     FooterComponent,
     MeasurementPlotComponent,
-    MeasurementTableComponent
+    MeasurementTableComponent,
+    StationsComponent
   ],
   imports: [
     BrowserModule,
