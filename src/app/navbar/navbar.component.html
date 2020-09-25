@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-    <button [routerLink]="['/']" mat-icon-button>
+    <button [routerLink]="['/']" mat-button>
         <mat-icon>home</mat-icon>
         <span class="button-text">Tempetaure Log</span>
     </button>
@@ -12,7 +12,11 @@
 <mat-menu #menu="matMenu">
     <button [routerLink]="['/stations']" mat-menu-item>
         <mat-icon>router</mat-icon>
-        <span class="button-text">Stations</span>
+        <span class="button-text">Stations list</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>show_chart</mat-icon>
+        <span class="button-text">Measurements</span>
     </button>
     <a href="https://github.com/bartek-krk" mat-menu-item>
         <mat-icon>info</mat-icon>
