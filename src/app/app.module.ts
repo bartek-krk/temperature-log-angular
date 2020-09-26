@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { MeasurementPlotComponent } from './measurement-plot/measurement-plot.component';
-import { MeasurementTableComponent } from './measurement-table/measurement-table.component';
 import { TlMaterialModule } from './tl-material/tl-material.module';
 import { StationsComponent } from './stations/stations.component';
 import { StationService } from './shared/station.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { MeasurementComponent } from './measurement/measurement.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +18,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    MeasurementPlotComponent,
-    MeasurementTableComponent,
-    StationsComponent
+    StationsComponent,
+    MeasurementComponent
   ],
   imports: [
     BrowserModule,

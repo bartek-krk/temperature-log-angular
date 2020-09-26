@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -18,6 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonModule
   ],
   exports: [MatToolbarModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,MatSelectModule,MatFormFieldModule,
-  MatCardModule,BrowserAnimationsModule]
+  MatCardModule,BrowserAnimationsModule,MatTableModule,BrowserModule]
 })
 export class TlMaterialModule { }

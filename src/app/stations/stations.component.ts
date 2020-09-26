@@ -9,11 +9,13 @@ import { Station,StationService } from '../shared/station.service';
 export class StationsComponent implements OnInit {
 
   stations:Station[];
+  displayedColumns: string[] = ['id', 'location', 'eMail', 'numberOfMeasurements', 'seeMeasurements'];
 
   constructor(private stationService: StationService) { }
 
   ngOnInit(): void {
     this.stations = this.stationService.getStations();
+    console.log(this.stations);
   }
 
 }
