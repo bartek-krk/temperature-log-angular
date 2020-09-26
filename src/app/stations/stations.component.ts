@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Station,StationService } from '../shared/station.service';
 
 @Component({
   selector: 'tl-stations',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StationsComponent implements OnInit {
 
-  constructor() { }
+  stations:Station[];
+
+  constructor(private stationService: StationService) { }
 
   ngOnInit(): void {
+    this.stations = this.stationService.getStations();
   }
 
 }

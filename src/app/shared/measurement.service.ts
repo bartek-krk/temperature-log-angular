@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MeasurementService {
+export class MeasurementService implements OnInit{
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+
+  }
+
 }

@@ -1,1 +1,20 @@
-<p>stations works!</p>
+<div class="header">
+    <h1>Currenly registered stations:</h1>
+</div>
+
+<div class="stations-table">
+    <table mat-table class="mat-elevation-z3">
+        <tr mat-header-row>
+            <th mat-header-cell>ID</th>
+            <th mat-header-cell>Location</th>
+            <th mat-header-cell>e-Mail</th>
+            <th mat-header-cell>Number of measurements</th>
+        </tr>
+        <tr mat-row *ngFor="let station of stations">
+            <td mat-cell>{{ station.id }}</td>
+            <td mat-cell>{{ station.location }}</td>
+            <td mat-cell>{{ station.eMail }}</td>
+            <td mat-cell>{{ station.numberOfMeasurements }}</td>
+        </tr>
+    </table>
+</div>

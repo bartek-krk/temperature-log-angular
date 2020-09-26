@@ -10,6 +10,8 @@ import { MeasurementPlotComponent } from './measurement-plot/measurement-plot.co
 import { MeasurementTableComponent } from './measurement-table/measurement-table.component';
 import { TlMaterialModule } from './tl-material/tl-material.module';
 import { StationsComponent } from './stations/stations.component';
+import { StationService } from './shared/station.service';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { StationsComponent } from './stations/stations.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TlMaterialModule
+    TlMaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
