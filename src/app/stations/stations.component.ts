@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 import { Station,StationService } from '../shared/station.service';
 
 @Component({
@@ -8,14 +9,13 @@ import { Station,StationService } from '../shared/station.service';
 })
 export class StationsComponent implements OnInit {
 
-  stations:Station[];
+  stations:Observable<any>;
   displayedColumns: string[] = ['id', 'location', 'eMail', 'numberOfMeasurements', 'seeMeasurements'];
 
   constructor(private stationService: StationService) { }
 
   ngOnInit(): void {
     this.stations = this.stationService.getStations();
-    console.log(this.stations);
   }
 
 }

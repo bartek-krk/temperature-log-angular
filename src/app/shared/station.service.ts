@@ -1,5 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { interval } from 'rxjs/internal/observable/interval';
+import { flatMap } from "rxjs/operators";
+
 
 export interface Station {
   id:number,
@@ -14,9 +18,7 @@ export class StationService{
 
   constructor(private http: HttpClient) { }
 
-  getStations(): Station[] {
-    let stations:Station[] = [];
-    this.http.get<Station[]>('http://temperature-log.herokuapp.com/api/stations/').subscribe(s => s.forEach(item => stations.push(item)));
-    return stations;
+  getStations(): Observable<any> {
+    return this.http.get<Station[]>("http://temperature-log.herokuapp.com/api/stations/");
   }
 }

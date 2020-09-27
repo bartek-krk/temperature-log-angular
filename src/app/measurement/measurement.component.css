@@ -1,0 +1,13 @@
+.header {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    display: table-cell;
+    word-break: break-word;
+}

@@ -9,8 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { TlMaterialModule } from './tl-material/tl-material.module';
 import { StationsComponent } from './stations/stations.component';
 import { StationService } from './shared/station.service';
-import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MeasurementComponent } from './measurement/measurement.component';
+import { MeasurementService } from './shared/measurement.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { MeasurementComponent } from './measurement/measurement.component';
     TlMaterialModule,
     HttpClientModule
   ],
-  providers: [StationService],
+  providers: [StationService,MeasurementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

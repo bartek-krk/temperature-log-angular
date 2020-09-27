@@ -2,8 +2,8 @@
     <h1>Currenly registered stations:</h1>
 </div>
 
-<div class="stations-table" *ngIf="stations.length != 0">
-    <table mat-table [dataSource]="stations" class="mat-elevation-z8">
+<div class="stations-table">
+    <table mat-table [dataSource]="stations | async" class="mat-elevation-z8">
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> ID </th>
           <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -26,7 +26,7 @@
 
         <ng-container matColumnDef="seeMeasurements">
             <th mat-header-cell *matHeaderCellDef> See measurements </th>
-            <td mat-cell *matCellDef="let element">  </td>
+            <td mat-cell *matCellDef="let element"> <button mat-button [routerLink]="['/measurements', element.id]"><mat-icon>show_chart</mat-icon></button> </td>
           </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
