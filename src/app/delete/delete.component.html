@@ -1,0 +1,19 @@
+<div class="header">
+    <h1>Delete station</h1>
+</div>
+
+<div class="message" *ngIf="message">
+    <p>{{ message }}</p>
+</div>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <mat-form-field>
+        <input matInput type="text" placeholder="Station ID" name="stationId" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="API Key" name="apiKey" ngModel required>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit">
+        <mat-icon>delete</mat-icon>
+    </button>
+</form>

@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { interval } from 'rxjs/internal/observable/interval';
-import { flatMap } from "rxjs/operators";
 
 
 export interface Station {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DeleteComponent } from './delete/delete.component';
 import { HomeComponent } from './home/home.component';
 import { MeasurementComponent } from './measurement/measurement.component';
 import { StationsComponent } from './stations/stations.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'measurements/:stationId',
     component: MeasurementComponent
+  },
+  {
+    path: 'delete',
+    component: DeleteComponent
   }
 ];
 

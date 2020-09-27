@@ -3,7 +3,7 @@
         <mat-icon>router</mat-icon>
         <span>Stations</span>
     </button>
-    <button mat-raised-button [color]="color2" (mouseover)="color2='accent'" (mouseout)="color2='transparent'">
+    <button [routerLink]="['/delete']" mat-raised-button [color]="color2" (mouseover)="color2='accent'" (mouseout)="color2='transparent'">
         <mat-icon>delete</mat-icon>
         <span>Delete station</span>
     </button>

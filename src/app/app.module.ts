@@ -12,6 +12,9 @@ import { StationService } from './shared/station.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MeasurementComponent } from './measurement/measurement.component';
 import { MeasurementService } from './shared/measurement.service';
+import { DeleteComponent } from './delete/delete.component';
+import { FormsModule } from '@angular/forms';
+import { DeleteService } from './shared/delete.service';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,17 @@ import { MeasurementService } from './shared/measurement.service';
     NavbarComponent,
     FooterComponent,
     StationsComponent,
-    MeasurementComponent
+    MeasurementComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TlMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [StationService,MeasurementService],
+  providers: [StationService,MeasurementService,DeleteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
