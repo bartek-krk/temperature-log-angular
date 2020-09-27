@@ -24,7 +24,7 @@ export class MeasurementService{
   constructor(private http: HttpClient) { }
 
   getMeasurements(stationId:number): Observable<any> {
-    return this.http.get<Measurement[]>("http://temperature-log.herokuapp.com/api/measurements/" + stationId);
+    return this.http.get<Measurement[]>("https://temperature-log.herokuapp.com/api/measurements/" + stationId);
   }
 
 }

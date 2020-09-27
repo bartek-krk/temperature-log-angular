@@ -19,6 +19,6 @@ export class StationService{
   constructor(private http: HttpClient) { }
 
   getStations(): Observable<any> {
-    return this.http.get<Station[]>("http://temperature-log.herokuapp.com/api/stations/");
+    return this.http.get<Station[]>("https://temperature-log.herokuapp.com/api/stations/");
   }
 }

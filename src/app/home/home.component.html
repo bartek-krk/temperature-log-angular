@@ -1,9 +1,9 @@
 <div class="button-panel">
-    <button [routerLink]="['/stations']" mat-raised-button>
+    <button [routerLink]="['/stations']" mat-raised-button [color]="color1" (mouseover)="color1='accent'" (mouseout)="color1='transparent'">
         <mat-icon>router</mat-icon>
         <span>Stations</span>
     </button>
-    <button mat-raised-button>
+    <button mat-raised-button [color]="color2" (mouseover)="color2='accent'" (mouseout)="color2='transparent'">
         <mat-icon>delete</mat-icon>
         <span>Delete station</span>
     </button>

@@ -117,8 +117,13 @@
               "devServerTarget": "TemperatureLogAngular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TemperatureLogAngular"
 }
