@@ -13,9 +13,8 @@ export class DeleteComponent {
   message:string;
 
   onSubmit(formData) {
-    console.log(formData.stationId.length);
     if(formData.stationId.length > 0 && formData.apiKey.length > 0) {
-      this.message = this.deleteService.delete(formData.stationId,formData.apiKey);
+      this.deleteService.delete(formData.stationId,formData.apiKey).subscribe(r => {this.message = r;});
     }
     else {this.message = "Fill in required fields!";}
   }

@@ -1,0 +1,39 @@
+.header {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.message, .message-ok, .message-warning {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    padding: 10px;
+    width: 50%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.message-warning {
+    background-color: red;
+}
+
+.message-ok {
+    background-color: green;
+}
+
+mat-form-field, mat-select, [mat-raised-button] {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .message {
+        width: 90%;
+    }
+    mat-form-field, mat-select, [mat-raised-button] {
+        width: 90%;
+    }
+  }

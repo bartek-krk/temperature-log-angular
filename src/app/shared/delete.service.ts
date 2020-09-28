@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, RendererFactory2 } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,10 @@ export class DeleteService {
 
   constructor(private http:HttpClient) { }
 
-  delete(stationId:string,apiKey:string) : string {
-    //TODO http delete
-    return "Entered ID " + stationId + " and API key: " + apiKey + " (this function is still under maintainance)";
+  delete(stationId:string,apiKey:string):Observable<any>{
+    const _this = this;
+    let url = "https://temperature-log.herokuapp.com/api/stations/" + stationId;
+    let headers = new HttpHeaders().set("api_key",apiKey);
+    return this.http.delete(url,{headers:headers,responseType: 'text'});
   }
 }

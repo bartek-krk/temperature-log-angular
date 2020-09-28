@@ -1,0 +1,19 @@
+<div class="header">
+    <h1>Register station</h1>
+</div>
+
+<div [ngClass]="(isWarning)?'message-warning':'message-ok'" *ngIf="message">
+    <p>{{ message }}</p>
+</div>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <mat-form-field>
+        <input matInput type="text" placeholder="e-mail" name="eMail" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Location" name="location" ngModel required>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit">
+        <mat-icon>delete</mat-icon>
+    </button>
+</form>

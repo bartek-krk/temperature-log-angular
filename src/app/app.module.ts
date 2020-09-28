@@ -15,6 +15,8 @@ import { MeasurementService } from './shared/measurement.service';
 import { DeleteComponent } from './delete/delete.component';
 import { FormsModule } from '@angular/forms';
 import { DeleteService } from './shared/delete.service';
+import { RegisterComponent } from './register/register.component';
+import { RegisterService } from './shared/register.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { DeleteService } from './shared/delete.service';
     FooterComponent,
     StationsComponent,
     MeasurementComponent,
-    DeleteComponent
+    DeleteComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { DeleteService } from './shared/delete.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [StationService,MeasurementService,DeleteService],
+  providers: [StationService,MeasurementService,DeleteService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

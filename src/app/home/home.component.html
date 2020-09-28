@@ -3,7 +3,11 @@
         <mat-icon>router</mat-icon>
         <span>Stations</span>
     </button>
-    <button [routerLink]="['/delete']" mat-raised-button [color]="color2" (mouseover)="color2='accent'" (mouseout)="color2='transparent'">
+    <button [routerLink]="['/register']" mat-raised-button [color]="color2" (mouseover)="color2='accent'" (mouseout)="color2='transparent'">
+        <mat-icon>add</mat-icon>
+        <span>Register station</span>
+    </button>
+    <button [routerLink]="['/delete']" mat-raised-button [color]="color3" (mouseover)="color3='accent'" (mouseout)="color3='transparent'">
         <mat-icon>delete</mat-icon>
         <span>Delete station</span>
     </button>

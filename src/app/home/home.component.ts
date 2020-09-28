@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   color1 = "transparent";
   color2 = "transparent";
+  color3 = "transparent";
 
   constructor() { }
 
