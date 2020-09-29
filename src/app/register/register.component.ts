@@ -16,7 +16,7 @@ export class RegisterComponent{
   onSubmit(formData) {
     if(formData.eMail.length > 0 && formData.location.length > 0) {
       this.isWarning = false;
-      this.message = this.registerService.register(formData.eMail,formData.location);
+      this.registerService.register(formData.eMail,formData.location).subscribe(r => {if(r==="Username occupied") this.isWarning = true; this.message = r;});
     }
     else {
       this.isWarning = true;
