@@ -1,6 +1,9 @@
 <div class="header">
     <h1>Temperatures in: {{ location }}</h1>
 </div>
+<div class="plot">
+  <canvas id="linechart"></canvas>
+</div>
 
 <div class="measurements-table">
     <table mat-table [dataSource]="measurements | async" class="mat-elevation-z8">
